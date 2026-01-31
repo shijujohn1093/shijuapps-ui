@@ -1,0 +1,17 @@
+/* Remove broken import. Place your search box styles here or import from a valid path. */
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 20px auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 25px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-box:focus {
+  border-color: #3498db;
+}
