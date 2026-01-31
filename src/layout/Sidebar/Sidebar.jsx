@@ -9,17 +9,22 @@ const Sidebar = ({ sidebarData, collapsed, setCollapsed }) => {
   const location = useLocation();
   return (
     <aside className={`sidebar bg-dark text-light${collapsed ? ' collapsed' : ''}`} style={{ position: 'relative' }}>
-      <Button
-        variant="outline-light"
-        size="sm"
-        style={{ position: 'absolute', top: 10, right: collapsed ? -18 : -18, zIndex: 2, background: 'rgba(0,0,0,0.5)', border: 'none', borderRadius: '50%', width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
-        onClick={() => setCollapsed(!collapsed)}
-        title={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
-        aria-label={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
-      >
-        {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
-      </Button>
       <Nav className="flex-column sidebar-nav">
+        {/* Expand/Collapse menu item at the top */}
+        <Nav.Link
+          className="sidebar-item"
+          onClick={() => setCollapsed(!collapsed)}
+          title={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
+          aria-label={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: collapsed ? 'center' : 'flex-start', marginBottom: 8 }}
+        >
+          <span className="sidebar-icon me-2">
+            {collapsed ? <ChevronRight size={22} /> : <ChevronLeft size={22} />}
+          </span>
+          {!collapsed && <span>{collapsed ? 'Expand' : 'Collapse'} </span>}
+        </Nav.Link>
+        {/* Divider below the expand/collapse menu */}
+        <div className="sidebar-divider" />
         {sidebarData.map((item, idx) => (
           <React.Fragment key={idx}>
             <Nav.Link

@@ -33,6 +33,16 @@ const sampleCardsData = [
     pageComponent: Directory,
   },
   {
+    title: 'Directory Card',
+    description: 'A new directory card for quick access.',
+    image: 'https://placehold.co/300x200?text=Directory+Card',
+    tags: ['directory', 'quick access'],
+    navigateTo: '/directory-card',
+    category: 'Resources',
+    icon: People,
+    pageComponent: Directory,
+  },
+  {
     title: 'Chat',
     description: 'Engage in real-time conversations with RAG.',
     image: 'https://placehold.co/300x200?text=Chat',
