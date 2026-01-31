@@ -84,7 +84,7 @@ const ChatBot = () => {
         setCollapsed={setCollapsed}
       />
       <div style={{ flex: 1, minWidth: 0, display: 'flex', justifyContent: 'flex-end', background: '#f8fafc', minHeight: 0 }}>
-        <Card className="chatbot-card" style={{ width: '100%', maxWidth: 900, height: '100%', margin: 0, minHeight: 0, display: 'flex', flexDirection: 'column', borderRadius: 0, boxShadow: '0 0 16px 0 rgba(0,0,0,0.04)' }}>
+        <Card className="chatbot-card" style={{ width: '100%', maxWidth: 900, height: '100%', margin: 0, minHeight: 0, padding: 0, paddingTop:0, display: 'flex', flexDirection: 'column', borderRadius: 0, boxShadow: '0 0 16px 0 rgba(0,0,0,0.04)' }}>
           <ChatHeader handleNewThread={handleNewThread} />
           <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             <Card.Body style={{ flex: 1, overflowY: 'auto', background: '#f8fafc', padding: 16, minHeight: 0 }}>
